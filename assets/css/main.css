@@ -17,6 +17,7 @@
   --nav-font: "Nunito",  sans-serif;
 }
 
+
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #1f1f1f; /* Background color for the entire website, including individual sections */
@@ -778,6 +779,9 @@ section,
   top: 100px;
   left: -20px;
   animation-delay: 3s;
+}
+.details-grid {
+  margin-top: 40px; /* can change 40px to whatever looks good */
 }
 
 @keyframes float {
