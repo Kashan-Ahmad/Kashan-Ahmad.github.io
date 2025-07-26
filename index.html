@@ -46,31 +46,12 @@
     <div class="header-container d-flex flex-column align-items-start">
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-          <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-          <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Experience</a></li>
-          <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-          <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-          <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i
-                class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+          <li><a href="#" onclick="scrollToSection('hero'); return false;"><i class="bi bi-house navicon"></i>Home</a></li>
+          <li><a href="#" onclick="scrollToSection('about'); return false;"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="#" onclick="scrollToSection('resume'); return false;"><i class="bi bi-file-earmark-text navicon"></i> Experience</a></li>
+          <li><a href="#" onclick="scrollToSection('portfolio'); return false;"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+          <li><a href="#" onclick="scrollToSection('resumeFile'); return false;"><i class="bi bi-images navicon"></i> Resume</a></li>          
+          <li><a href="#" onclick="scrollToSection('contact'); return false;"><i class="bi bi-envelope navicon"></i> Contact</a></li>
         </ul>
       </nav>
 
@@ -114,8 +95,8 @@
                 <!-- <p class="description">Passionate about creating exceptional digital experiences that blend innovative design with functional development. Let's bring your vision to life.</p> -->
 
                 <div class="hero-actions">
-                  <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                  <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                  <a href="#" class="btn btn-primary" onclick="scrollToSection('portfolio'); return false;">View My Work</a>
+                  <a href="#" class="btn btn-outline" onclick="scrollToSection('contact'); return false;">Get In Touch</a>
                 </div>
 
                 <div class="social-links">
@@ -251,11 +232,11 @@
             -->
 
               <div class="cta-section">
-                <a href="assets/files/KashanAhmad_Resume.pdf" class="btn btn-primary" target="_blank"> <!--download-->
+                <a href="assets/files/KashanAhmad_Resume.pdf" class="btn btn-primary" target="_blank" download > <!--download-->
                   <i class="bi bi-download"></i>
                   Download Resume
                 </a>
-                <a href="#contact" class="btn btn-outline">
+                <a href="#" class="btn btn-outline" onclick="scrollToSection('contact'); return false;">
                   <i class="bi bi-chat-dots"></i>
                   Let's Talk
                 </a>
@@ -423,9 +404,8 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-          in iste officiis commodi quidem hic quas.</p>
+        <p>A curated selection of projects demonstrating my expertise in software engineering, embedded systems, and
+          creative problem-solving.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -437,10 +417,10 @@
               <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
                 <ul class="portfolio-filters isotope-filters">
                   <li data-filter="*" class="filter-active">All Projects</li>
-                  <li data-filter=".filter-photography">Photography</li>
-                  <li data-filter=".filter-design">Design</li>
-                  <li data-filter=".filter-automotive">Automotive</li>
-                  <li data-filter=".filter-nature">Nature</li>
+                  <li data-filter=".filter-software">Software</li>
+                  <li data-filter=".filter-ml">Machine Learning</li>
+                  <li data-filter=".filter-embeddedSystems">Embedded Systems</li>
+                  <li data-filter=".filter-fpga">FPGA Programming</li>
                 </ul>
               </div>
             </div>
@@ -448,108 +428,127 @@
             <div class="col-lg-9">
               <div class="row gy-4 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography">
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-software">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-portrait-1.webp" class="img-fluid" alt="Portfolio Image"
-                      loading="lazy">
+                    <img src="assets/img/portfolio/reversi.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Photography</span>
-                        <h4>Capturing Moments</h4>
+                        <span class="category">Software</span>
+                        <h4>Reversi/Othello</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-portrait-1.webp" class="glightbox"
-                            title="Capturing Moments"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="Portfolio Image"
-                      loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Web Design</span>
-                        <h4>Woodcraft Design</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox" title="Woodcraft Design"><i
+                          <a href="assets/img/portfolio/reversi.webp" class="glightbox" title="More Details"
+                            data-gallery="portfolio-gallery" data-title="Reversi"
+                            data-description="A classic Reversi (Othello) game built in C with full game logic, move validation, and dynamic board updates. Features an AI opponent and competed against one of the smartest university-built AIs in a class-wide tournament. Focuses on clean logic and strategic gameplay.<br><br><a href='https://github.com/Kashan-Ahmad/Reversi' target='_blank'>Click here to view on GitHub</a>"><i
                               class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <a href="https://github.com/Kashan-Ahmad/Reversi" target="_blank" title="View on GitHub"><i
+                              class="bi bi-github"></i></a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div><!-- End Portfolio Item -->
 
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-automotive">
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-embeddedSystems filter-fpga">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-portrait-2.webp" class="img-fluid" alt="Portfolio Image"
+                    <img src="assets/img/portfolio/spaceInvaders.webp" class="img-fluid" alt="Portfolio Image"
                       loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Automotive</span>
-                        <h4>Classic Beauty</h4>
+                        <span class="category">Embedded Systems + FPGA</span>
+                        <h4>Space Invaders (FPGA)</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-portrait-2.webp" class="glightbox"
-                            title="Classic Beauty"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-nature">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-portrait-4.webp" class="img-fluid" alt="Portfolio Image"
-                      loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Nature</span>
-                        <h4>Natural Growth</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-portrait-4.webp" class="glightbox"
-                            title="Natural Growth"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid" alt="Portfolio Image"
-                      loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Photography</span>
-                        <h4>Urban Stories</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox" title="Urban Stories"><i
+                          <a href="assets/img/portfolio/spaceInvaders.webp" class="glightbox" title="More Details"
+                            data-gallery="portfolio-gallery" data-title="Space Invaders"
+                            data-description="FPGA-based Space Invaders game built in Verilog for the DE1-SoC board. Features VGA output, PS/2 keyboard input, FSM-driven game logic, pixel-by-pixel character rendering, and real-time collision detection.<br><br><a href='https://github.com/Kashan-Ahmad/spaceInvaders' target='_blank'>Click here to view on GitHub</a>"><i
                               class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <a href="https://github.com/Kashan-Ahmad/spaceInvaders" target="_blank"
+                            title="View on GitHub"><i class="bi bi-github"></i></a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div><!-- End Portfolio Item -->
 
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design">
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-embeddedSystems">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image"
+                    <img src="assets/img/portfolio/lockPuzzle.webp" class="img-fluid" alt="Portfolio Image"
                       loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Web Design</span>
-                        <h4>Digital Experience</h4>
+                        <span class="category">Embedded Systems</span>
+                        <h4>Lock Puzzle</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox"
-                            title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <a href="assets/img/portfolio/lockPuzzle.webp" class="glightbox" title="More Details"
+                            data-gallery="portfolio-gallery" data-title="Space Invaders"
+                            data-description="A retro-style game written in low-level C, running on an the DE1-SoC FPGA board used as a RISC-V processor. Utilizes VGA for graphics, PS/2 for input, and direct hardware-mapped I/O for audio. Built from scratch to explore embedded systems, hardware interfacing, and game design.<br><br><a href='https://github.com/Kashan-Ahmad/lockPuzzle' target='_blank'>Click here to view on GitHub</a>"><i
+                              class="bi bi-plus-lg"></i></a>
+                          <a href="https://github.com/Kashan-Ahmad/lockPuzzle" target="_blank" title="View on GitHub"><i
+                              class="bi bi-github"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-software">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/univeristy-admission.webp" class="img-fluid" alt="Portfolio Image"
+                      loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Software</span>
+                        <h4>University Admission Predictor</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/univeristy-admission.webp" class="glightbox"
+                            title="More Details" data-gallery="portfolio-gallery"
+                            data-title="University Admission Predictor"
+                            data-description="Predicts a student's likelihood of university acceptance, waitlist, or rejection based on selected programs and online statistics. Built with Java and WindowBuilder for an interactive GUI tailored to Grade 12 applicants.<br><br><a href='https://github.com/Kashan-Ahmad/University-Admission-Predictor' target='_blank'>Click here to view on GitHub</a>"><i
+                              class="bi bi-plus-lg"></i></a>
+                          <a href="https://github.com/Kashan-Ahmad/University-Admission-Predictor" target="_blank"
+                            title="View on GitHub"><i class="bi bi-github"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-ml">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/alphabetGesture.jpg" class="img-fluid" alt="Portfolio Image"
+                      loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Machine Learning</span>
+                        <h4>Hand Gesture Recognition</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/alphabetGesture.jpg" class="glightbox" title="More Details"
+                            data-gallery="portfolio-gallery" data-title="Hand Gesture Recognition"
+                            data-description="Hand gesture recognition using CNNs and transfer learning (AlexNet) in PyTorch. Includes custom feature extraction, training loop, and accuracy visualization. Achieved 94% validation and 93% test accuracy on 224×224 RGB gesture images.<br><br><a href='https://github.com/Kashan-Ahmad/Gesture-Recognition' target='_blank'>Click here to view on GitHub</a>"><i
+                              class="bi bi-plus-lg"></i></a>
+                          <a href="https://github.com/Kashan-Ahmad/Gesture-Recognition" target="_blank"
+                            title="View on GitHub"><i class="bi bi-github"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-ml">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/skinLesion.webp" class="img-fluid" alt="Portfolio Image"
+                      loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Machine Learning</span>
+                        <h4>SkinAI Classifier</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/skinLesion.webp" class="glightbox" title="More Details"
+                            data-gallery="portfolio-gallery" data-title="SkinAI Classifier"
+                            data-description="Skin lesion classification project utilizing transfer learning with ResNet, advanced preprocessing, and data augmentation to enhance model accuracy. Explores architectural optimization, training efficiency, and comparison with a custom CNN baseline.<br><br><a href='https://github.com/vishwaspuriofficial/SkinAI-Classifier' target='_blank'>Click here to view on GitHub</a>"><i
+                              class="bi bi-plus-lg"></i></a>
+                          <a href="https://github.com/vishwaspuriofficial/SkinAI-Classifier" target="_blank"
+                            title="View on GitHub"><i class="bi bi-github"></i></a>
                         </div>
                       </div>
                     </div>
@@ -566,168 +565,17 @@
 
     </section><!-- /Portfolio Section -->
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
 
-      <!-- Section Title -->
+    <section id="resumeFile" class="resume section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="service-header">
-          <div class="row align-items-center">
-            <div class="col-lg-8 col-md-12">
-              <div class="service-intro">
-                <h2 class="service-heading">
-                  <div>Innovative business</div>
-                  <div><span>performance solutions</span></div>
-                </h2>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-              <div class="service-summary">
-                <p>
-                  We integrate forward-thinking strategies, creative approaches, and state-of-the-art technologies to
-                  deliver exceptional customer experiences that drive growth and engage target markets.
-                </p>
-                <a href="services.html" class="service-btn">
-                  View All Services
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-palette"></i>
-              </div>
-              <a href="service-details.html"
-                class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Creative <span>branding</span>
-                </a>
-              </h3>
-              <p>
-                Nulla facilisi. Maecenas eget magna neque. Suspendisse potenti. Curabitur eleifend nisi non magna
-                vulputate, vel condimentum libero tempus. Proin consectetur feugiat diam.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-gem"></i>
-              </div>
-              <a href="service-details.html"
-                class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Design <span>systems</span>
-                </a>
-              </h3>
-              <p>
-                Praesent euismod varius tellus, vel bibendum nunc interdum at. Donec vehicula diam vel metus venenatis
-                convallis. Aliquam erat volutpat. Etiam viverra magna sit amet.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-megaphone"></i>
-              </div>
-              <a href="service-details.html"
-                class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Marketing <span>strategies</span>
-                </a>
-              </h3>
-              <p>
-                Vivamus tempor velit id magna dictum, sed fermentum nisi faucibus. Integer nec pretium sapien. Fusce
-                tincidunt ligula et purus consequat, ac pellentesque nulla eleifend.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-code-slash"></i>
-              </div>
-              <a href="service-details.html"
-                class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Digital <span>platforms</span>
-                </a>
-              </h3>
-              <p>
-                Cras fermentum odio eu feugiat malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et
-                accumsan cursus. Morbi placerat nulla vel nunc viverra accumsan.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-graph-up"></i>
-              </div>
-              <a href="service-details.html"
-                class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Growth <span>acceleration</span>
-                </a>
-              </h3>
-              <p>
-                Aenean vel augue vel nisi bibendum posuere. Phasellus in lacus quis urna sodales dignissim. Duis aliquam
-                libero eget risus facilisis. Quisque eget libero vel nisl fringilla.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-camera-video"></i>
-              </div>
-              <a href="service-details.html"
-                class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Media <span>solutions</span>
-                </a>
-              </h3>
-              <p>
-                Etiam efficitur lacus in diam finibus, nec ultrices est sagittis. Maecenas elementum magna sed risus
-                faucibus, nec commodo purus facilisis. Vestibulum accumsan magna.
-              </p>
-            </div>
-          </div>
-        </div>
-
+        <h2>Resume</h2>
+        <p>Here is my resume. You can also <a href="assets/files/KashanAhmad_Resume.pdf" download>download it</a>.</p>
       </div>
 
-    </section><!-- /Services Section -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <iframe src="assets/files/KashanAhmad_Resume.pdf" width="100%" height="500px" style="border:none;"></iframe>
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -861,6 +709,15 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+  function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
 
 </body>
 

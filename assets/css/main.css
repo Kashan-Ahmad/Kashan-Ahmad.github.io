@@ -77,6 +77,28 @@ a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
+.portfolio-links .bi-github:hover {
+  color: #000; /* Darker github icon on hover */
+}
+
+.glightbox-clean .gdesc-inner { /*makes inside text black */
+  color: #000;
+  padding: 20px;
+}
+.glightbox-clean a { /*Makes the github link look clean on popup*/
+  color: #1e90ff;
+  text-decoration: underline;
+}
+.gslide-title { /* Bolds the title*/
+  font-weight: bold !important;
+  font-size: 20px !important;
+  color: #000 !important;
+}
+
+.glightbox-container .gslide-inner-content { /* makes the pop up window scrollable*/
+  max-height: 90vh; /* 90% of the viewport height */
+  overflow-y: auto;
+}
 
 h1,
 h2,
