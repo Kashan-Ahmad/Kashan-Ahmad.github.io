@@ -64,6 +64,14 @@
         <a href="assets/files/KashanAhmad_Resume.pdf" target="_blank" title="View Resume">
           <i class="bi bi-file-earmark-pdf"></i></a>
       </div>
+      
+      <div class="theme-toggle-wrapper">
+        <span id="theme-label" class="theme-label">Dark Mode</span>
+        <label class="theme-switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
 
     </div>
 
@@ -718,6 +726,33 @@
     }
   }
 </script>
+
+<script>
+const themeToggle = document.getElementById('theme-toggle');
+const themeLabel = document.getElementById('theme-label');
+
+// Load saved theme
+if (localStorage.getItem('theme') === 'light') {
+  document.body.classList.add('light-mode');
+  themeToggle.checked = true;
+  themeLabel.textContent = "Light Mode";
+} else {
+  themeLabel.textContent = "Dark Mode";
+}
+
+themeToggle.addEventListener('change', () => {
+  if (themeToggle.checked) {
+    document.body.classList.add('light-mode');
+    localStorage.setItem('theme', 'light');
+    themeLabel.textContent = "Light Mode";
+  } else {
+    document.body.classList.remove('light-mode');
+    localStorage.setItem('theme', 'dark');
+    themeLabel.textContent = "Dark Mode";
+  }
+});
+</script>
+
 
 </body>
 

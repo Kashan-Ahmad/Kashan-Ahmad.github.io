@@ -61,6 +61,22 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+
+body.light-mode .header {
+    --background-color: #f8f9fa; /* Light navbar background */
+    color: #000; /* Navbar text color */
+}
+body.light-mode .navmenu a,
+body.light-mode .navmenu a:focus {
+    color: #000; /* Black links */
+}
+
+body.light-mode .navmenu a:hover,
+body.light-mode .navmenu .active,
+body.light-mode .navmenu .active:focus {
+    color: #007bff; /* Blue hover/active color */
+}
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -2618,4 +2634,113 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/* ------------------- Light Mode Theme ------------------- */
+body.light-mode {
+  --background-color: #ffffff;    /* Light background */
+  --default-color: #1f1f1f;       /* Dark text */
+  --heading-color: #000000;       /* Darker headings */
+  --accent-color: #007bff;        /* Blue accent for links/buttons */
+  --surface-color: #f5f5f5;       /* Light gray for cards */
+  --contrast-color: #000000;      /* Text on accent surfaces */
+  --nav-color: #000000;           /* Sidebar and nav text */
+  --nav-hover-color: #007bff;     /* Hover color */
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #000000;
+  --nav-dropdown-hover-color: #007bff;
+}
+
+.portfolio-info .category {
+  color: #1e90ff !important;
+}
+
+body.light-mode .social-links a {
+  background: #e0e0e0;    /* Light gray circle */
+  color: #000;            /* Black icon */
+}
+
+body.light-mode .social-links a:hover {
+  background: #007bff;    /* Blue hover effect */
+  color: #fff;
+}
+
+
+/* For clear light mode */
+.theme-toggle-wrapper button {
+  color: #ccc;  /* Default color */
+}
+
+.theme-toggle-wrapper button:hover {
+  color: #fff;  /* Bright on hover */
+}
+
+body.light-mode .theme-toggle-wrapper button {
+  color: #333;  /* Dark text in light mode */
+}
+
+/* Portfolio project titles in light mode */
+body.light-mode .portfolio-info h4 {
+  color: #ff7a00 !important; /* Bright orange */
+}
+
+/* Toggle Switch */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* When checkbox is checked, slide the circle */
+input:checked + .slider {
+  background-color: #007bff;  /* Blue for light mode */
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--default-color);
+  margin-top: 15px;
+}
+
+body.light-mode .theme-label {
+  color: #333;  /* Label color in light mode */
 }
