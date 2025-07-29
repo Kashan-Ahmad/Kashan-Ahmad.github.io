@@ -29,13 +29,6 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: SnapFolio
-  * Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
-  * Updated: Jun 13 2025 with Bootstrap v5.3.6
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
@@ -46,12 +39,18 @@
     <div class="header-container d-flex flex-column align-items-start">
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#" onclick="scrollToSection('hero'); return false;"><i class="bi bi-house navicon"></i>Home</a></li>
-          <li><a href="#" onclick="scrollToSection('about'); return false;"><i class="bi bi-person navicon"></i> About</a></li>
-          <li><a href="#" onclick="scrollToSection('resume'); return false;"><i class="bi bi-file-earmark-text navicon"></i> Experience</a></li>
-          <li><a href="#" onclick="scrollToSection('portfolio'); return false;"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-          <li><a href="#" onclick="scrollToSection('resumeFile'); return false;"><i class="bi bi-images navicon"></i> Resume</a></li>          
-          <li><a href="#" onclick="scrollToSection('contact'); return false;"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+          <li><a href="#" onclick="scrollToSection('hero'); return false;"><i class="bi bi-house navicon"></i>Home</a>
+          </li>
+          <li><a href="#" onclick="scrollToSection('about'); return false;"><i class="bi bi-person navicon"></i>
+              About</a></li>
+          <li><a href="#" onclick="scrollToSection('resume'); return false;"><i
+                class="bi bi-file-earmark-text navicon"></i> Experience</a></li>
+          <li><a href="#" onclick="scrollToSection('portfolio'); return false;"><i class="bi bi-images navicon"></i>
+              Portfolio</a></li>
+          <li><a href="#" onclick="scrollToSection('resumeFile'); return false;"><i class="bi bi-images navicon"></i>
+              Resume</a></li>
+          <li><a href="#" onclick="scrollToSection('contact'); return false;"><i class="bi bi-envelope navicon"></i>
+              Contact</a></li>
         </ul>
       </nav>
 
@@ -64,7 +63,7 @@
         <a href="assets/files/KashanAhmad_Resume.pdf" target="_blank" title="View Resume">
           <i class="bi bi-file-earmark-pdf"></i></a>
       </div>
-      
+
       <div class="theme-toggle-wrapper">
         <span id="theme-label" class="theme-label">Dark Mode</span>
         <label class="theme-switch">
@@ -103,8 +102,10 @@
                 <!-- <p class="description">Passionate about creating exceptional digital experiences that blend innovative design with functional development. Let's bring your vision to life.</p> -->
 
                 <div class="hero-actions">
-                  <a href="#" class="btn btn-primary" onclick="scrollToSection('portfolio'); return false;">View My Work</a>
-                  <a href="#" class="btn btn-outline" onclick="scrollToSection('contact'); return false;">Get In Touch</a>
+                  <a href="#" class="btn btn-primary" onclick="scrollToSection('portfolio'); return false;">View My
+                    Work</a>
+                  <a href="#" class="btn btn-outline" onclick="scrollToSection('contact'); return false;">Get In
+                    Touch</a>
                 </div>
 
                 <div class="social-links">
@@ -240,7 +241,8 @@
             -->
 
               <div class="cta-section">
-                <a href="assets/files/KashanAhmad_Resume.pdf" class="btn btn-primary" target="_blank" download > <!--download-->
+                <a href="assets/files/KashanAhmad_Resume.pdf" class="btn btn-primary" target="_blank" download>
+                  <!--download-->
                   <i class="bi bi-download"></i>
                   Download Resume
                 </a>
@@ -339,17 +341,21 @@
                 <p class="company"><i class="bi bi-building"></i> Hart House Theatre - University of Toronto (APS111)
                 </p>
                 <ul>
-                  <li>Led a team of six engineering students in analyzing, developing, and implementing an
-                    accessibility-focused design for
-                    Hart House Theatre, ensuring compliance with stakeholder requirements.</li>
-                  <li>Coordinated and led weekly meetings, delegating tasks efficiently to maintain project timelines
-                    and deliverables.</li>
-                  <li>Facilitated structured risk assessments and mitigation strategies throughout the project
-                    lifecycle, identifying potential
-                    challenges and ensuring successful execution.</li>
-                  <li>Authored and reviewed professional documentation, including technical reports and stakeholder
-                    presentations, ensuring
-                    clarity, accuracy, and alignment with project goals.</li>
+                  <li>Led a 6-member engineering design team in developing a universal accessibility solution for both
+                    audience seating and stage access at Hart House Theatre, managing team coordination, task
+                    delegation, stakeholder engagement, and technical report development.</li>
+                  <li>Conducted in-depth site surveys, stakeholder research, and environmental assessments (ramp
+                    gradient analysis, load requirements, slip resistance) to establish functional specifications and
+                    engineering constraints aligned with Ontario Building Code and AODA standards.</li>
+                  <li>Engineered and evaluated 100+ design concepts using morphological charts, SCAMPER ideation,
+                    feasibility analyses, and multi-criteria decision tools (Graphical Decision Matrices, Pugh Method).
+                  </li>
+                  <li>Proposed a retractable seating system coupled with industrial wheelchair lifts, optimizing
+                    structural integrity, spatial efficiency, and user inclusivity while maintaining theatre aesthetics.
+                  </li>
+                  <li>Delivered a complete engineering design package, including 3D sketch models, feasibility analysis,
+                    and testing plans outlining FEA-based stress simulations and long-term maintainability assessments.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -719,39 +725,39 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-  function scrollToSection(id) {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     }
-  }
-</script>
+  </script>
 
-<script>
-const themeToggle = document.getElementById('theme-toggle');
-const themeLabel = document.getElementById('theme-label');
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeLabel = document.getElementById('theme-label');
 
-// Load saved theme
-if (localStorage.getItem('theme') === 'light') {
-  document.body.classList.add('light-mode');
-  themeToggle.checked = true;
-  themeLabel.textContent = "Light Mode";
-} else {
-  themeLabel.textContent = "Dark Mode";
-}
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
+      themeToggle.checked = true;
+      themeLabel.textContent = "Light Mode";
+    } else {
+      themeLabel.textContent = "Dark Mode";
+    }
 
-themeToggle.addEventListener('change', () => {
-  if (themeToggle.checked) {
-    document.body.classList.add('light-mode');
-    localStorage.setItem('theme', 'light');
-    themeLabel.textContent = "Light Mode";
-  } else {
-    document.body.classList.remove('light-mode');
-    localStorage.setItem('theme', 'dark');
-    themeLabel.textContent = "Dark Mode";
-  }
-});
-</script>
+    themeToggle.addEventListener('change', () => {
+      if (themeToggle.checked) {
+        document.body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light');
+        themeLabel.textContent = "Light Mode";
+      } else {
+        document.body.classList.remove('light-mode');
+        localStorage.setItem('theme', 'dark');
+        themeLabel.textContent = "Dark Mode";
+      }
+    });
+  </script>
 
 
 </body>
